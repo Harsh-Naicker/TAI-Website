@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <style>
+        /*
+
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 77). 
+        
+The 'supports' rule will only run if your browser supports CSS grid.
+
+Flexbox is used as a fallback so that browsers which don't support grid will still recieve an identical layout.
+
+*/
+
+        @import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #fafafa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem 1rem;
+        }
+
+        .heading {
+            font-size: 4rem;
+            font-weight: 500;
+            line-height: 1.5;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        .heading span {
+            display: block;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            /* Compensate for excess margin on outer gallery flex items */
+            margin: -1rem -1rem;
+        }
+
+        .gallery-item {
+            /* Minimum width of 24rem and grow to fit available space */
+            flex: 1 0 14rem;
+            /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+            margin: 1rem;
+            box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+        }
+
+        .gallery-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 400ms ease-out;
+            min-width: 20%;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.15);
+        }
+
+        /*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+        @supports (display: grid) {
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+                grid-gap: 2rem;
+            }
+
+            .gallery,
+            .gallery-item {
+                margin: 0;
+            }
+        }
+
+        body {
+            /* background-image: url('https://3.bp.blogspot.com/-DrXsyTKMjx8/XG2s0CxSwsI/AAAAAAAAGwU/Qn5_JIhfLq8fQIo86abJF1egWdNdZch8gCHMYCw/s1600/remarkable-design-light-color-wallpaper-blue-plain-all-hd-s-artnak.jpg'); */
+            background: #0e1428;
+        }
+
+
+
+        .lightbox {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.75);
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            position: relative;
+            top: -100%;
+            /* Transition */
+            transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+        }
+
+        .lightbox:target {
+            outline: none;
+            top: 0;
+            opacity: 1;
+            pointer-events: auto;
+            transition: all 1.2s ease;
+            -moz-transition: all 1.2s ease;
+            -ms-transition: all 1.2s ease;
+            -o-transition: all 1.2s ease;
+            -webkit-transition: all 1.2s ease;
+        }
+
+        .lightbox:target img {
+            top: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                /* background: #050505 !important; */
+                background: #050505 !important;
+            }
+        }
+
+        .top-nav-collapse {
+            background-color: #050505
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar " style="font-size: 18px;">
+    <a class="navbar-brand " href="#">
+        <img src="https://i.ibb.co/KjfFwP9/White-Logo-TAI.png" height="80px" width="110px" alt="mdb logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+        aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ml-3 mr-3">
+                <a class="nav-link" href="{{url_for('index')}}">Home
+                </a>
+            </li>
+         
+            <li class="nav-item ml-3 mr-3">
+                <a class="nav-link" href="{{url_for('about_us')}}">Our Team</a>
+            </li>
+            <li class="nav-item ml-3 mr-3">
+                <a class="nav-link" href="{{url_for('projects')}}"> Our Projects</a>
+            </li>
+
+            <li class="nav-item ml-3 mr-3"> <a class="nav-link waves-effect waves-light" href="preq" data-toggle="modal"
+                    data-target="#preq">Request a Project</a>
+            </li>
+
+
+            <li class="nav-item ml-3 mr-3"> <a class="nav-link waves-effect waves-light" href="preq" data-toggle="modal"
+                    data-target="#workshop">Request a Workshop</a>
+            </li>
+            <li class="nav-item ml-3 mr-3 active">
+                <a class="nav-link" href="{{url_for('gallery')}}">Gallery   <span class="sr-only">(current)</span></a>
+            </li>
+           
+
+
+
+
+
+        </ul>
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" target="_blank"
+                    href="https://www.google.com/search?source=hp&ei=WSj9XbGUONCy9QOZ1InICg&q=team+aviators+international&btnK=Google+Search&oq=youtube.com&gs_l=psy-ab.3..0j0i131j0j0i131j0l3j0i131j0l2.1643.4948..5218...0.0..0.160.1223.1j10......0....1..gws-wiz.FVfhRk8yl9o&ved=0ahUKEwjxpNiHgsXmAhVQWX0KHRlqAqkQ4dUDCAY&uact=5#btnK=Google%20Search">
+                    <i class="fab fa-google"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" target="_blank"
+                    href="https://www.instagram.com/teamaviatorsinternational/?hl=en">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" target="_blank"
+                    href="https://www.facebook.com/AviatorsInternational">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" target="_blank"
+                    href="https://www.linkedin.com/company/team-aviators-international">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </li>
+
+
+
+        </ul>
+    </div>
+</nav>
+<!--/.Navbar -->
+
+
+<!-- Contact Us Modal-->
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="contact">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Contact Us</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+            <div class="modal-body mx-3">
+                <form method="post">
+                    {{form3.hidden_tag()}}
+                    <div class="md-form mb-5">
+
+                        {{form3.name3.label()}}
+                        {{form3.name3(class="form-control validate")}}
+                    </div>
+                    <div class="md-form mb-5">
+
+                        {{form3.mobile3.label()}}
+                        {{form3.mobile3(class="form-control validate")}}
+                    </div>
+                    <div class="md-form mb-5">
+
+                        {{form3.email3.label()}}
+                        {{form3.email3(class="form-control validate")}}
+                    </div>
+
+                    <div class="md-form mb-5">
+
+                        {{form3.message.label()}}
+                        {{form3.message(class="form-control validate")}}
+
+                    </div>
+                    <div class="md-form mb-5">
+
+                        {{form3.submit3(class="btn btn-primary")}}
+
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- /Contact Us Modal-->
+
+
+
+<!--Workshop Modal-->
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="workshop">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Attend a Workshop</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <form method="post">
+                    {{form2.hidden_tag()}}
+                    <div class="md-form mb-5">
+
+                        {{form2.name2.label()}}
+                        {{form2.name2(class="form-control validate")}}
+                    </div>
+                    <div class="md-form mb-5">
+
+                        {{form2.organisation.label()}}
+                        {{form2.organisation(class="form-control validate")}}
+                    </div>
+                    <div class="md-form mb-5">
+
+                        {{form2.mobile2.label()}}
+                        {{form2.mobile2(class="form-control validate")}}
+                    </div>
+                    <div class="md-form mb-5">
+
+                        {{form2.email2.label()}}
+                        {{form2.email2(class="form-control validate")}}
+                    </div>
+                    <div class="md-form mb-5">
+                        {{form2.workshop.label()}}<br><br>
+
+                        {% for choice in form2.workshop %}
+
+                        <tr>
+                            <td>
+                                {% if loop.index==1 %}
+                                {{choice}} Drone Programming
+                                {% elif loop.index==2 %}
+                                {{choice}} RC Plane Design
+                                {% elif loop.index==3 %}
+                                {{choice}} Structural and Flow Analysis of RC Planes
+                                {% else %}
+                                {{choice}} Material Selection for RC Planes
+                                {% endif %}
+
+                            </td>
+                            <br>
+
+                        </tr>
+
+
+
+                        {% endfor %}
+
+
+                    </div>
+
+                    <div class="md-form mb-5">
+
+                        {{form2.attendees.label()}}
+                        {{form2.attendees(class="form-control validate")}}
+
+                    </div>
+                    <div class="md-form mb-5">
+
+                        {{form2.submit2(class="btn btn-primary")}}
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--/Workshop Modal-->
+
+<!-- Project Request Modal-->
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="preq">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Project Request</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <form method="post">
+                    {{form1.hidden_tag()}}
+                    <div class="md-form mb-5">
+
+                        {{form1.name.label()}}
+                        {{form1.name(class="form-control validate")}}
+                    </div>
+                    <div class="md-form mb-5">
+
+                        {{form1.mobile.label()}}
+                        {{form1.mobile(class="form-control validate")}}
+                    </div>
+                    <div class="md-form mb-5">
+
+                        {{form1.email.label()}}
+                        {{form1.email(class="form-control validate")}}
+                    </div>
+                    <div class="md-form mb-5">
+
+                        {{form1.title.label()}}
+                        {{form1.title(class="form-control validate")}}
+
+                    </div>
+                    <div class="md-form mb-5">
+
+                        {{form1.description.label()}}
+                        {{form1.description(class="form-control validate")}}
+
+                    </div>
+                    <div class="md-form mb-5">
+
+                        {{form1.submit1(class="btn btn-primary")}}
+
+                    </div>
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--/Modal-->
+
+
+
+<div class="container" style="margin-top: 100px;">
+
+
+    <h1 class="heading text-white" style="border-bottom: 5px white solid;">
+        <strong>&nbsp;&nbsp;Gallery&nbsp;&nbsp;</strong>
+    </h1>
+    <br>
+    
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <a href="#img_1"><img class="gallery-image" src="https://i.ibb.co/m4yc8SX/IMG-20181102-134417.jpg"></a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="#img_2"><img class="gallery-image" src="https://i.ibb.co/0FBfVgh/IMG-20181102-134551.jpg"></a>
+        </div>
+
+
+        <div class="gallery-item">
+            <a href="#img_3"><img class="gallery-image" src="https://i.ibb.co/SnvQjvr/IMG-20190716-171135.jpg"></a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="#img_4"><img class="gallery-image"
+                    src="https://i.ibb.co/D8n9Zh4/IMG-20190716-171152-Bokeh.jpg"></a>
+        </div>
+        <div class="gallery-item">
+            <a href="#img_5"><img class="gallery-image" src="https://i.ibb.co/0B2SVGp/IMG-20190719-160947.jpg"></a>
+        </div>
+
+
+        <div class="gallery-item">
+            <a href="#img_6"><img class="gallery-image" src="https://i.ibb.co/NVkHHSY/IMG-20190719-160957.jpg"></a>
+        </div>
+        <div class="gallery-item">
+            <a href="#img_7"><img class="gallery-image" src="https://i.ibb.co/r43ShSB/IMG-20190721-174503.jpg"></a>
+        </div>
+
+
+        <div class="gallery-item">
+            <a href="#img_8"><img class="gallery-image" src="https://i.ibb.co/kM5X6sQ/IMG-20190721-174624.jpg"></a>
+        </div>
+
+
+        <div class="gallery-item">
+            <a href="#img_9"><img class="gallery-image" src="https://i.ibb.co/Hpy354T/IMG-20190924-181542.jpg"></a>
+        </div>
+
+
+        <div class="gallery-item">
+            <a href="#img_10"><img class="gallery-image" src="https://i.ibb.co/xLKR0NF/IMG-20200227-061822.jpg"></a>
+        </div>
+
+
+        <div class="gallery-item">
+            <a href="#img_11"><img class="gallery-image" src="https://i.ibb.co/Fx1027H/IMG-20200228-120212.jpg"></a>
+        </div>
+
+
+        <div class="gallery-item">
+            <a href="#img_12"><img class="gallery-image" src="https://i.ibb.co/vVP19SJ/IMG-20180411-WA0002.jpg"></a>
+        </div>
+        <div class="gallery-item">
+            <a href="#img_13"><img class="gallery-image" src="https://i.ibb.co/hKc3cCR/IMG-20180321-WA0019.jpg"></a>
+        </div>
+        <div class="gallery-item">
+            <a href="#img_14"><img class="gallery-image" src="https://i.ibb.co/0hCJtfD/IMG-20180321-WA0014.jpg"></a>
+        </div>
+        <div class="gallery-item">
+            <a href="#img_15"><img class="gallery-image" src="https://i.ibb.co/Q64G4rv/IMG-20200228-120559.jpg"></a>
+        </div>
+        <div class="gallery-item">
+            <a href="#img_16"><img class="gallery-image" src="https://i.ibb.co/9ZV8sRw/IMG-20180321-WA0020.jpg"></a>
+        </div>
+
+
+
+
+    </div>
+    <a href="#_16" class="lightbox trans" id="img_1"><img src="https://i.ibb.co/m4yc8SX/IMG-20181102-134417.jpg"></a>
+    <a href="#_16" class="lightbox trans" id="img_2"><img src="https://i.ibb.co/0FBfVgh/IMG-20181102-134551.jpg"></a>
+    <a href="#_16" class="lightbox trans" id="img_3"><img src="https://i.ibb.co/SnvQjvr/IMG-20190716-171135.jpg"></a>
+    <a href="#_16" class="lightbox trans" id="img_4"><img
+            src="https://i.ibb.co/D8n9Zh4/IMG-20190716-171152-Bokeh.jpg"></a>
+    <a href="#_16" class="lightbox trans" id="img_5"><img src="https://i.ibb.co/0B2SVGp/IMG-20190719-160947.jpg"></a>
+    <a href="#_16" class="lightbox trans" id="img_6"><img src="https://i.ibb.co/NVkHHSY/IMG-20190719-160957.jpg"></a>
+    <a href="#_16" class="lightbox trans" id="img_7"><img src="https://i.ibb.co/r43ShSB/IMG-20190721-174503.jpg"></a>
+    <a href="#_16" class="lightbox trans" id="img_8"><img src="https://i.ibb.co/kM5X6sQ/IMG-20190721-174624.jpg"></a>
+    <a href="#_16" class="lightbox trans" id="img_9"><img src="https://i.ibb.co/Hpy354T/IMG-20190924-181542.jpg"></a>
+    <a href="#_16" class="lightbox trans" id="img_10"><img src="https://i.ibb.co/xLKR0NF/IMG-20200227-061822.jpg"></a>
+    <a href="#_16" class="lightbox trans" id="img_11"><img src="https://i.ibb.co/Fx1027H/IMG-20200228-120212.jpg"></a>
+    <a href="#_16" class="lightbox trans" id="img_12"><img src="https://i.ibb.co/vVP19SJ/IMG-20180411-WA0002.jpg"></a>
+    <a href="#_16" class="lightbox trans" id="img_13"><img src="https://i.ibb.co/hKc3cCR/IMG-20180321-WA0019.jpg"></a>
+    <a href="#_16" class="lightbox trans" id="img_14"><img src="https://i.ibb.co/0hCJtfD/IMG-20180321-WA0014.jpg"></a>
+    <a href="#_16" class="lightbox trans" id="img_15"><img src="https://i.ibb.co/Q64G4rv/IMG-20200228-120559.jpg"></a>
+    <a href="#_16" class="lightbox trans" id="img_16"><img src="https://i.ibb.co/9ZV8sRw/IMG-20180321-WA0020.jpg"></a>
+
+
+
+</div>
+<br>
+<br>
+
+
+
+
+<!-- Footer -->
+<div>
+    <footer class="page-footer font-small black
+pt-4" style="background-color: #050505; ">
+
+        <!-- Footer Text -->
+        <div class="container-fluid text-center text-md-left">
+
+
+            <div class="row" style="font-size: 120%;">
+                <div class="col-sm-4">
+                    <h2><strong>Contact Us</strong></h2><br><br>
+                    <p><i class="fas fa-map-marker-alt fa-2x"></i>&nbsp;&nbsp;&nbsp;
+                        VIT University Chennai Campus,<br> Kelambakkam - Vandalur Rd,<br> Chennai, Tamil Nadu 600127
+                    </p>
+                    <p><a href="tel:+91 98929 02383"><i class="fas fa-phone"></i>&nbsp;&nbsp;&nbsp;+91 98929 02383
+                    </p>
+                    <p><a href="mailto:teamaviatorsinternational@gmail.com"><i
+                                class="fas fa-envelope"></i>&nbsp;&nbsp;&nbsp;teamaviatorsinternational@gmail.com</a>
+                    </p>
+                    <p>
+                        <a href="preq" data-toggle="modal" data-target="#contact"><i
+                                class="fas fa-question"></i>&nbsp;&nbsp;&nbsp;Have any further doubts?</a>
+                    </p>
+
+
+
+                </div>
+                <div class="col-sm-4">
+                    <h2><strong>
+                            Find Us
+                        </strong></h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124483.40068401828!2d80.08535047620059!3d12.836408826600854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5259ba8cceb509%3A0xbe3fbbd2b29ff1ee!2sAVIATORS%20INTERNATIONAL!5e0!3m2!1sen!2sin!4v1598857036194!5m2!1sen!2sin"
+                        width="100%" height="250px;" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div class="col-sm-4">
+                    <ul>Developed by:
+                        <li>Vidit Naik</li>
+                        <li>Meghna Manoj Nair</li>
+                        <li>Nikita Rath</li>
+                        <li>Harsh Sankar Naicker</li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row ">
+                <div class="col-sm-12 text-center">
+                    <a class="ins-ic mr-3" role="button" target="_blank"
+                        href="https://www.instagram.com/teamaviatorsinternational/?hl=en"><i
+                            class="fab fa-2x ml-5 mr-5 fa-instagram"></i></a>
+                    <a class="fb-ic mr-3" target="_blank" role="button"
+                        href="https://www.facebook.com/AviatorsInternational"><i
+                            class="fab fa-2x ml-5 mr-5 fa-facebook-f"></i></a>
+                    <a class="li-ic mr-3" target="_blank" role="button"
+                        href="https://www.linkedin.com/company/team-aviators-international"><i
+                            class="fab fa-2x ml-5 mr-5 fa-linkedin-in"></i></a>
+                    <a class="yt-ic mr-3" role="button" target="_blank"
+                        href="https://www.youtube.com/channel/UCevoVmjAEpPY4JLs3Pvxz2A"><i
+                            class="fab fa-2x ml-5 mr-5 fa-youtube"></i></a>
+                </div>
+
+
+            </div>
+
+        </div>
+        <!-- Footer Text -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href=""> Team Aviators International</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+</div>
+
+<!-- Footer -->
+
+
+
+
+
+</html>

@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Team Aviators International</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            /* background-image: url('https://3.bp.blogspot.com/-DrXsyTKMjx8/XG2s0CxSwsI/AAAAAAAAGwU/Qn5_JIhfLq8fQIo86abJF1egWdNdZch8gCHMYCw/s1600/remarkable-design-light-color-wallpaper-blue-plain-all-hd-s-artnak.jpg'); */
+            background: #0e1428;
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                /* background: #050505 !important; */
+                background: #050505 !important;
+            }
+        }
+
+        .view,
+        body,
+        html {
+            height: 100%
+        }
+
+        /* .navbar {
+            background-color: rgba(0, 0, 0, .2)
+        } */
+
+        .page-footer,
+        .top-nav-collapse {
+            background-color: #050505
+        }
+
+        @media only screen and (max-width:768px) {
+            .navbar {
+                background-color: #050505
+            }
+        }
+
+
+        @import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: #333;
+        }
+
+        .card {
+            border-radius: 35px;
+            background: #4e2d83;
+            color: white;
+
+        }
+
+        .card-image {
+            border-radius: 35px;
+        }
+
+        header h1 {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        header p {
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        .hexa {
+            border: 0px;
+            float: left;
+            text-align: center;
+            height: 35px;
+            width: 60px;
+            font-size: 22px;
+            background: #D95D39;
+            color: #D95D39;
+            position: relative;
+            margin-top: 15px;
+        }
+
+        .hexa:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 15px solid #D95D39;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            top: -15px;
+        }
+
+        .hexa:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-top: 15px solid #D95D39;
+            bottom: -15px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 0;
+            width: 100%;
+            margin-top: 20px;
+            list-style-type: none;
+            color: white;
+        }
+
+        .timeline:before {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            content: ' ';
+            display: block;
+            width: 2px;
+            height: 100%;
+            margin-left: -1px;
+            background: #D95D39;
+            background: -moz-linear-gradient(top, rgba(213, 213, 213, 0) 0%, #D95D39 8%, #D95D39 92%, rgba(213, 213, 213, 0) 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30, 87, 153, 1)), color-stop(100%, rgba(125, 185, 232, 1)));
+            background: -webkit-linear-gradient(top, rgba(213, 213, 213, 0) 0%, #D95D39 8%, #D95D39 92%, rgba(213, 213, 213, 0) 100%);
+            background: -o-linear-gradient(top, rgba(213, 213, 213, 0) 0%, #D95D39 8%, #D95D39 92%, rgba(213, 213, 213, 0) 100%);
+            background: -ms-linear-gradient(top, rgba(213, 213, 213, 0) 0%, #D95D39 8%, #D95D39 92%, rgba(213, 213, 213, 0) 100%);
+            background: linear-gradient(to bottom, rgba(213, 213, 213, 0) 0%, #D95D39 8%, #D95D39 92%, rgba(213, 213, 213, 0) 100%);
+            z-index: 5;
+        }
+
+        .timeline li {
+            padding: 2em 0;
+        }
+
+        .timeline .hexa {
+            width: 16px;
+            height: 10px;
+            position: absolute;
+            background: #D95D39;
+            z-index: 5;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            top: -30px;
+            margin-top: 0;
+        }
+
+        .timeline .hexa:before {
+            border-bottom: 4px solid#D95D39;
+            border-left-width: 8px;
+            border-right-width: 8px;
+            top: -4px;
+        }
+
+        .timeline .hexa:after {
+            border-left-width: 8px;
+            border-right-width: 8px;
+            border-top: 4px solid#D95D39;
+            bottom: -4px;
+        }
+
+        .direction-l,
+        .direction-r {
+            float: none;
+            width: 100%;
+            text-align: center;
+        }
+
+        .flag-wrapper {
+            text-align: center;
+            position: relative;
+        }
+
+        .flag {
+            position: relative;
+            /* display: inline; */
+            background: #D95D39;
+            font-weight: 600;
+            z-index: 15;
+            padding: 6px 10px;
+            text-align: left;
+            border-radius: 5px;
+        }
+
+        .direction-l .flag:after,
+        .direction-r .flag:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -15px;
+            height: 0;
+            width: 0;
+            margin-left: -8px;
+            border: solid transparent;
+            border-bottom-color: #D95D39;
+            border-width: 8px;
+            pointer-events: none;
+        }
+
+        .direction-l .flag {
+            -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+            box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+        }
+
+        .direction-r .flag {
+            -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+        }
+
+        .time-wrapper {
+            display: block;
+            position: relative;
+            margin: 4px 0 0 0;
+            z-index: 14;
+            line-height: 1em;
+            vertical-align: middle;
+            color: #D95D39;
+        }
+
+        .direction-l .time-wrapper {
+            float: none;
+        }
+
+        .direction-r .time-wrapper {
+            float: none;
+        }
+
+        .time {
+            background: #D95D39;
+            display: inline-block;
+            padding: 8px;
+        }
+
+        #achivements {
+            color: white;
+        }
+
+        .desc {
+            position: relative;
+            margin: 1em 0 0 0;
+            padding: 1em;
+            background: rgba(255, 167, 38, 1);
+            -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+            -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+            z-index: 15;
+            color: black;
+        }
+
+        .direction-l .desc,
+        .direction-r .desc {
+            position: relative;
+            margin: 1em 1em 0 1em;
+            padding: 1em;
+            z-index: 15;
+        }
+
+        @media(min-width: 768px) {
+            .timeline {
+                width: 660px;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+
+            .timeline li:after {
+                content: "";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+            .timeline .hexa {
+                left: -28px;
+                right: auto;
+                top: 8px;
+            }
+
+            .timeline .direction-l .hexa {
+                left: auto;
+                right: -28px;
+            }
+
+            .direction-l {
+                position: relative;
+                width: 310px;
+                float: left;
+                text-align: right;
+            }
+
+            .direction-r {
+                position: relative;
+                width: 310px;
+                float: right;
+                text-align: left;
+            }
+
+            .flag-wrapper {
+                display: inline-block;
+            }
+
+            .flag {
+                font-size: 18px;
+            }
+
+            .direction-l .flag:after {
+                left: auto;
+                right: -16px;
+                top: 50%;
+                margin-top: -8px;
+                border: solid transparent;
+                border-left-color: #D95D39;
+                border-width: 8px;
+            }
+
+            .direction-r .flag:after {
+                top: 50%;
+                margin-top: -8px;
+                border: solid transparent;
+                border-right-color: #D95D39;
+                border-width: 8px;
+                left: -8px;
+            }
+
+            .time-wrapper {
+                display: inline;
+                vertical-align: middle;
+                margin: 0;
+            }
+
+            .direction-l .time-wrapper {
+                float: left;
+            }
+
+            .direction-r .time-wrapper {
+                float: right;
+            }
+
+            .time {
+                padding: 5px 10px;
+            }
+
+            .direction-r .desc {
+                margin: 1em 0 0 0.75em;
+            }
+        }
+
+        @media(min-width: 992px) {
+            .timeline {
+                width: 800px;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+
+            .direction-l {
+                position: relative;
+                width: 380px;
+                float: left;
+                text-align: left;
+            }
+
+            .direction-r {
+                position: relative;
+                width: 380px;
+                float: right;
+                text-align: left;
+            }
+
+            #title_about {
+                font-size: 100px;
+
+            }
+
+            #description {
+                font-size: x-large;
+
+            }
+        }
+
+        /* .carousel-inner > .carousel-item > img{
+            height: 950px;
+        } */
+    </style>
+</head>
+
+<body>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+    <script>        new WOW().init();
+    </script>
+    <!--Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar " style="font-size: 18px;">
+        <a class="navbar-brand " href="#">
+            <img src="https://i.ibb.co/KjfFwP9/White-Logo-TAI.png" height="80px" width="110px" alt="mdb logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+            aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item  ml-3 mr-3">
+                    <a class="nav-link" href="{{url_for('index')}}">Home
+                    </a>
+                </li>
+              
+                <li class="nav-item ml-3 mr-3">
+                    <a class="nav-link" href="{{url_for('about_us')}}">Our Team</a>
+                </li>
+                <li class="nav-item ml-3 mr-3 active">
+                        <span class="sr-only">(current)</span>
+                        <a class="nav-link" href="{{url_for('projects')}}"> Our Projects </a>
+                </li>
+
+                <li class="nav-item ml-3 mr-3"> <a class="nav-link waves-effect waves-light" href="preq"
+                        data-toggle="modal" data-target="#preq">Request a Project</a>
+                </li>
+
+
+                <li class="nav-item ml-3 mr-3"> <a class="nav-link waves-effect waves-light" href="preq"
+                        data-toggle="modal" data-target="#workshop">Request a Workshop</a>
+                </li>
+                <li class="nav-item ml-3 mr-3">
+                    <a class="nav-link" href="{{url_for('gallery')}}">Gallery</a>
+                </li>
+               
+
+
+
+
+
+            </ul>
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" target="_blank"
+                        href="https://www.google.com/search?source=hp&ei=WSj9XbGUONCy9QOZ1InICg&q=team+aviators+international&btnK=Google+Search&oq=youtube.com&gs_l=psy-ab.3..0j0i131j0j0i131j0l3j0i131j0l2.1643.4948..5218...0.0..0.160.1223.1j10......0....1..gws-wiz.FVfhRk8yl9o&ved=0ahUKEwjxpNiHgsXmAhVQWX0KHRlqAqkQ4dUDCAY&uact=5#btnK=Google%20Search">
+                        <i class="fab fa-google"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" target="_blank"
+                        href="https://www.instagram.com/teamaviatorsinternational/?hl=en">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" target="_blank"
+                        href="https://www.facebook.com/AviatorsInternational">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" target="_blank"
+                        href="https://www.linkedin.com/company/team-aviators-international">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+
+
+
+            </ul>
+        </div>
+    </nav>
+    <!--/.Navbar -->
+
+
+
+    <!-- Contact Us Modal-->
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="contact">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Contact Us</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+                <div class="modal-body mx-3">
+                    <form method="post">
+                        {{form3.hidden_tag()}}
+                        <div class="md-form mb-5">
+
+                            {{form3.name3.label()}}
+                            {{form3.name3(class="form-control validate")}}
+                        </div>
+                        <div class="md-form mb-5">
+
+                            {{form3.mobile3.label()}}
+                            {{form3.mobile3(class="form-control validate")}}
+                        </div>
+                        <div class="md-form mb-5">
+
+                            {{form3.email3.label()}}
+                            {{form3.email3(class="form-control validate")}}
+                        </div>
+
+                        <div class="md-form mb-5">
+
+                            {{form3.message.label()}}
+                            {{form3.message(class="form-control validate")}}
+
+                        </div>
+                        <div class="md-form mb-5">
+
+                            {{form3.submit3(class="btn btn-primary")}}
+
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- /Contact Us Modal-->
+
+
+
+    <!--Workshop Modal-->
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="workshop">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Attend a Workshop</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <form method="post">
+                        {{form2.hidden_tag()}}
+                        <div class="md-form mb-5">
+
+                            {{form2.name2.label()}}
+                            {{form2.name2(class="form-control validate")}}
+                        </div>
+                        <div class="md-form mb-5">
+
+                            {{form2.organisation.label()}}
+                            {{form2.organisation(class="form-control validate")}}
+                        </div>
+                        <div class="md-form mb-5">
+
+                            {{form2.mobile2.label()}}
+                            {{form2.mobile2(class="form-control validate")}}
+                        </div>
+                        <div class="md-form mb-5">
+
+                            {{form2.email2.label()}}
+                            {{form2.email2(class="form-control validate")}}
+                        </div>
+                        <div class="md-form mb-5">
+                            {{form2.workshop.label()}}<br><br>
+
+                            {% for choice in form2.workshop %}
+
+                            <tr>
+                                <td>
+                                    {% if loop.index==1 %}
+                                    {{choice}} Drone Programming
+                                    {% elif loop.index==2 %}
+                                    {{choice}} RC Plane Design
+                                    {% elif loop.index==3 %}
+                                    {{choice}} Structural and Flow Analysis of RC Planes
+                                    {% else %}
+                                    {{choice}} Material Selection for RC Planes
+                                    {% endif %}
+
+                                </td>
+                                <br>
+
+                            </tr>
+
+
+
+                            {% endfor %}
+
+
+                        </div>
+
+                        <div class="md-form mb-5">
+
+                            {{form2.attendees.label()}}
+                            {{form2.attendees(class="form-control validate")}}
+
+                        </div>
+                        <div class="md-form mb-5">
+
+                            {{form2.submit2(class="btn btn-primary")}}
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/Workshop Modal-->
+
+    <!-- Project Request Modal-->
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="preq">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Project Request</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <form method="post">
+                        {{form1.hidden_tag()}}
+                        <div class="md-form mb-5">
+
+                            {{form1.name.label()}}
+                            {{form1.name(class="form-control validate")}}
+                        </div>
+                        <div class="md-form mb-5">
+
+                            {{form1.mobile.label()}}
+                            {{form1.mobile(class="form-control validate")}}
+                        </div>
+                        <div class="md-form mb-5">
+
+                            {{form1.email.label()}}
+                            {{form1.email(class="form-control validate")}}
+                        </div>
+                        <div class="md-form mb-5">
+
+                            {{form1.title.label()}}
+                            {{form1.title(class="form-control validate")}}
+
+                        </div>
+                        <div class="md-form mb-5">
+
+                            {{form1.description.label()}}
+                            {{form1.description(class="form-control validate")}}
+
+                        </div>
+                        <div class="md-form mb-5">
+
+                            {{form1.submit1(class="btn btn-primary")}}
+
+                        </div>
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--/Modal-->
+    
+
+   
+
+
+
+
+
+  
+    
+
+    <div class="container " style="border-bottom: 5px white solid ; width: 90%; margin-top: 150px;">
+        <h1 class="text-center" id="title_about" style="color: white;"><strong><b>Our Projects</b></strong></h1>
+    </div>
+    <br>
+    <br>
+
+    <center>
+
+        <div class="card" style="width: 95%; ">
+            <div class="view-overlay " style="border-radius: 35px;">
+
+                <!-- Card content -->
+                <div class="card-body ">
+                    <div class="container ">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h3 class="card-title" align="left"><b>Orel 2017</b></h3>
+                                <p align="justify" style="color: white;">
+                                    Winner of the TATA Makerthon 2017-18 (UAV Challenge), we are forever proud of
+                                    our Fully Autonomous
+                                    Heavy Lifting Hexarotor: Orel. Modular design reduces the hassle of replacing
+                                    the broken components. Components
+                                    which are susceptible to breakage are easy to manufacture and replace. Required
+                                    thrust is provided with
+                                    high power, low KV, durable and efficient BLDC motors from Foxtech. Maximum
+                                    thrust of all the motors combined
+                                    is 81 KgF. Thus, our effective payload capacity is 25 Kg excluding the weight of
+                                    the drone itself.
+                                </p>
+
+                            </div>
+                            <div class="col-lg-6">
+                                <br>
+                                <br>
+                                <img class="card-image" src="https://i.ibb.co/Xb2pDmd/orel2.jpg" height="70%" width="70%">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <div class="card" style="width: 95%; ">
+            <div class="view-overlay">
+
+                <!-- Card content -->
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h3 class="card-title" align="left"><b>Micro Class Aircraft 2018</b></h3>
+                                <p align="justify" style="color: white;">
+                                    The length of the main structure is 29.30 inches. It has a wingspan of 1 m and a
+                                    height of 8.80 inches.
+                                    The aircraft is driven by a 1120 KV BLDC Motor and controlled by a 6 channel
+                                    transmitter and receiver. Balsa wood is used for basic plane model. The weight
+                                    of plane was 1.5 Kg.
+                                    This aircraft marked the start of our journery into the world of SAE Aerodesign
+                                    Challenge (Southern Section) that
+                                    occurs annually.
+                                </p>
+
+                            </div>
+                            <div class="col-lg-6">
+                                <br>
+                                <br>
+                                <img class="card-image" src="https://i.ibb.co/LCpZcS2/Regular-Class-Anna-Univ.png" height="70%"
+                                    width="70%">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <div class="card" style="width: 95%; ">
+            <div class="view-overlay">
+
+                <!-- Card content -->
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h3 class="card-title" align="left"><b>Micro Class Aircraft 2019</b></h3>
+                                <p align="justify" style="color: white;">
+                                    Winner of the 3rd Prize of the Innovation Challenge at SAE Aerodesign Challenge
+                                    2019, the total length of
+                                    the aircraft is 26.18 inches, width is 2.36 inches and the height is 2.95
+                                    inches.
+                                    It has a wingspan of 1.3 m. The aircraft is driven by a 1000 KV BLDC Motor and
+                                    controlled by a 6 channel
+                                    transmitter and receiver. Balsa wood is used for basic plane model with the help
+                                    of PVC pipe for structure stability
+                                    and monokote is used for entire sheeting of aircraft. The entire weight without
+                                    payload is 800 g. The innovation in this aircraft
+                                    was that its wing was made in 3 parts which were then joined together using 3D
+                                    printed nuts and bolts.
+                                </p>
+
+                            </div>
+                            <div class="col-lg-6">
+                                <br>
+                                <br>
+                                <img class="card-image" src="https://i.ibb.co/fdJtpfX/microclass.jpg" height="70%" width="70%">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <div class="card" style="width: 95%; ">
+            <div class="view-overlay">
+
+                <!-- Card content -->
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h3 class="card-title" align="left"><b>Regular Class Aircraft 2019</b></h3>
+                                <p align="justify" style="color: white;">
+                                    The total length of aircraft is approximately 152.56 inches (387.514cm), the
+                                    wing span is 86.61 inches (2.2m)
+                                    and the height is 21.412 inches (543.89mm). The aircraft is driven by a 520 KV
+                                    BLDC Motor and controlled by a 6 channel
+                                    transmitter and receiver. Balsa wood is used for basic plane model with the help
+                                    of PVC pipe for structure stability
+                                    and monokote is used for entire sheeting of aircraft. The entire weight without
+                                    payload is 3.4 Kg.
+                                </p>
+
+                            </div>
+                            <div class="col-lg-6">
+                                <br>
+                                <br>
+                                <img class="card-image" src="https://i.ibb.co/FXbX6yz/Regular.png" height="70%" width="70%">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <div class="card" style="width: 95%; ">
+            <div class="view-overlay">
+
+                <!-- Card content -->
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h3 class="card-title" align="left"><b>Micro Class Aircraft 2020</b></h3>
+                                <p align="justify" style="color: white;">
+                                    With a payload capacity of 1000 grams, this aircraft has the highest thrust to
+                                    weight ratio out of all of our
+                                    aircrafts so far. It has a length of 28.34 inches, a width of 3.07 inches and a
+                                    height of 2.95 inches.
+                                    Its wingspan is 1.2 meters. The fuselage design is similar to a simple boom
+                                    fuselage with tapered end but
+                                    with an elevated tail end for better airflow on the empennage. The aircraft runs
+                                    using a X2814-1000KV BLDC motor.
+                                    The weight of the aircraft without the payload is 800 grams. The Selig airfoil
+                                    has been used in this aircraft.
+                                    Despite the manufacturing difficulty of the airfoil, the wing of the aircraft
+                                    was developed flawlessly.
+                                </p>
+
+                            </div>
+                            <div class="col-lg-6">
+                                <br>
+                                <br>
+                                <img class="card-image" src="https://i.ibb.co/2tzjfYh/microclass2020.png" height="70%" width="70%">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+        <!-- Card -->
+    </center>
+
+
+
+
+
+
+    <br>
+    <br>
+
+
+
+ 
+    <!-- Footer -->
+    <footer class="page-footer font-small black
+    pt-4" style="background-color: #050505;">
+
+        <!-- Footer Text -->
+        <div class="container-fluid text-center text-md-left">
+
+
+            <div class="row" style="font-size: 120%;">
+                <div class="col-sm-4">
+                    <h2><strong>Contact Us</strong></h2><br><br>
+                    <p><i class="fas fa-map-marker-alt fa-2x"></i>&nbsp;&nbsp;&nbsp;
+                        VIT University Chennai Campus,<br> Kelambakkam - Vandalur Rd,<br> Chennai, Tamil Nadu 600127
+                    </p>
+                    <p><a href="tel:+91 98929 02383"><i class="fas fa-phone"></i>&nbsp;&nbsp;&nbsp;+91 98929 02383
+                    </p>
+                    <p><a href="mailto:teamaviatorsinternational@gmail.com"><i
+                                class="fas fa-envelope"></i>&nbsp;&nbsp;&nbsp;teamaviatorsinternational@gmail.com</a>
+                    </p>
+                    <p>
+                        <a href="preq" data-toggle="modal" data-target="#contact"><i
+                                class="fas fa-question"></i>&nbsp;&nbsp;&nbsp;Have any further doubts?</a>
+                    </p>
+
+
+
+                </div>
+                <div class="col-sm-4">
+                    <h2><strong>
+                            Find Us
+                        </strong></h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124483.40068401828!2d80.08535047620059!3d12.836408826600854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5259ba8cceb509%3A0xbe3fbbd2b29ff1ee!2sAVIATORS%20INTERNATIONAL!5e0!3m2!1sen!2sin!4v1598857036194!5m2!1sen!2sin"
+                        width="100%" height="250px;" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div class="col-sm-4">
+                    <ul>Developed by:
+                        <li>Vidit Naik</li>
+                        <li>Meghna Manoj Nair</li>
+                        <li>Nikita Rath</li>
+                        <li>Harsh Sankar Naicker</li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row ">
+                <div class="col-sm-12 text-center">
+                    <a class="ins-ic mr-3" role="button" target="_blank"
+                        href="https://www.instagram.com/teamaviatorsinternational/?hl=en"><i
+                            class="fab fa-2x ml-5 mr-5 fa-instagram"></i></a>
+                    <a class="fb-ic mr-3" target="_blank" role="button"
+                        href="https://www.facebook.com/AviatorsInternational"><i
+                            class="fab fa-2x ml-5 mr-5 fa-facebook-f"></i></a>
+                    <a class="li-ic mr-3" target="_blank" role="button"
+                        href="https://www.linkedin.com/company/team-aviators-international"><i
+                            class="fab fa-2x ml-5 mr-5 fa-linkedin-in"></i></a>
+                    <a class="yt-ic mr-3" role="button" target="_blank"
+                        href="https://www.youtube.com/channel/UCevoVmjAEpPY4JLs3Pvxz2A"><i
+                            class="fab fa-2x ml-5 mr-5 fa-youtube"></i></a>
+                </div>
+
+
+            </div>
+
+        </div>
+        <!-- Footer Text -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href=""> Team Aviators International</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+
+    <!-- Footer -->
+
+
+
+
+
+    <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+</body>
+
+</html>

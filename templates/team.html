@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Our Team</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .card{
+        border-radius: 35px;
+        background: #4e2d83;
+        color: white;
+        height: calc(100% - 15px);
+        min-height: 580px;
+        max-height: 665px;
+        
+        
+        
+
+        }
+    
+        body {
+            /* background-image: url('https://3.bp.blogspot.com/-DrXsyTKMjx8/XG2s0CxSwsI/AAAAAAAAGwU/Qn5_JIhfLq8fQIo86abJF1egWdNdZch8gCHMYCw/s1600/remarkable-design-light-color-wallpaper-blue-plain-all-hd-s-artnak.jpg'); */
+            background: #0e1428;
+        }
+        body{
+            font-family: 'Raleway', sans-serif;
+            color: #333;
+        }
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                /* background: #050505 !important; */
+                background:  #050505 !important;
+            }
+        }
+        .page-footer,
+        .top-nav-collapse {
+            background-color: #050505
+        }
+        /* .card-img-top{
+            border-radius: 35px;
+        } */
+        @media(min-width: 992px){
+            #title_about{
+                font-size: 100px;   
+            
+            }
+            #title_department{
+                font-size: 35px;   
+            
+            }
+        
+        }
+        .btn{
+            color: white;
+            border-radius: 35px;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <!--Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar "
+        style="font-size: 18px;">
+        <a class="navbar-brand " href="#">
+            <img src="https://i.ibb.co/KjfFwP9/White-Logo-TAI.png" height="80px" width="110px" alt="mdb logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+            aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ml-3 mr-3">
+                    <a class="nav-link" href="{{url_for('index')}}">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item active ml-3 mr-3">
+                    <a class="nav-link" href="{{url_for('about_us')}}">Our Team</a>
+                </li> 
+                <li class="nav-item ml-3 mr-3">
+                    <a class="nav-link" href="{{url_for('projects')}}"> Our Projects</a>
+                </li>
+
+                <li class="nav-item ml-3 mr-3"> <a class="nav-link waves-effect waves-light" href="preq"
+                        data-toggle="modal" data-target="#preq">Request a Project</a> 
+                </li>
+
+
+                <li class="nav-item ml-3 mr-3"> <a class="nav-link waves-effect waves-light" href="preq"
+                        data-toggle="modal" data-target="#workshop">Request a Workshop</a> 
+                </li>
+                <li class="nav-item ml-3 mr-3">
+                    <a class="nav-link" href="{{url_for('gallery')}}">Gallery</a>
+                </li>
+               
+
+               
+
+
+
+            </ul>
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" target="_blank"
+                        href="https://www.google.com/search?source=hp&ei=WSj9XbGUONCy9QOZ1InICg&q=team+aviators+international&btnK=Google+Search&oq=youtube.com&gs_l=psy-ab.3..0j0i131j0j0i131j0l3j0i131j0l2.1643.4948..5218...0.0..0.160.1223.1j10......0....1..gws-wiz.FVfhRk8yl9o&ved=0ahUKEwjxpNiHgsXmAhVQWX0KHRlqAqkQ4dUDCAY&uact=5#btnK=Google%20Search">
+                        <i class="fab fa-google"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" target="_blank"
+                        href="https://www.instagram.com/teamaviatorsinternational/?hl=en">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" target="_blank"
+                        href="https://www.facebook.com/AviatorsInternational">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light"
+                        href="https://www.linkedin.com/company/team-aviators-international">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+
+
+
+            </ul>
+        </div>
+    </nav>
+    <!--/.Navbar -->
+
+
+
+    <!-- Contact Us Modal-->
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="contact">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Contact Us</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <form method="post">
+                        {{form3.hidden_tag()}}
+                        <div class="md-form mb-5">
+    
+                            {{form3.name3.label()}}
+                            {{form3.name3(class="form-control validate")}}
+                        </div>
+                        <div class="md-form mb-5">
+    
+                            {{form3.mobile3.label()}}
+                            {{form3.mobile3(class="form-control validate")}}
+                        </div>
+                        <div class="md-form mb-5">
+    
+                            {{form3.email3.label()}}
+                            {{form3.email3(class="form-control validate")}}
+                        </div>
+    
+                        <div class="md-form mb-5">
+    
+                            {{form3.message.label()}}
+                            {{form3.message(class="form-control validate")}}
+    
+                        </div>
+                        <div class="md-form mb-5">
+    
+                            {{form3.submit3(class="btn btn-primary")}}
+    
+                        </div>
+                    </form>
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- /Contact Us Modal-->
+
+
+
+    <!--Workshop Modal-->
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="workshop">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Attend a Workshop</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <form method="post">
+                        {{form2.hidden_tag()}}
+                        <div class="md-form mb-5">
+    
+                            {{form2.name2.label()}}
+                            {{form2.name2(class="form-control validate")}}
+                        </div>
+                        <div class="md-form mb-5">
+    
+                            {{form2.organisation.label()}}
+                            {{form2.organisation(class="form-control validate")}}
+                        </div>
+                        <div class="md-form mb-5">
+    
+                            {{form2.mobile2.label()}}
+                            {{form2.mobile2(class="form-control validate")}}
+                        </div>
+                        <div class="md-form mb-5">
+    
+                            {{form2.email2.label()}}
+                            {{form2.email2(class="form-control validate")}}
+                        </div>
+                        <div class="md-form mb-5">
+    
+                            {{form2.workshop.label()}}<br><br>
+                                
+                                {% for choice in form2.workshop %}
+                                
+                                    <tr>
+                                        <td>
+                                            {% if loop.index==1 %}
+                                            {{choice}} Drone Programming 
+                                            {% elif loop.index==2 %}
+                                            {{choice}} RC Plane Design
+                                            {% elif loop.index==3 %}
+                                            {{choice}} Structural and Flow Analysis of RC Planes
+                                            {% else %}
+                                            {{choice}} Material Selection for RC Planes
+                                            {% endif %}
+                                            
+                                        </td>
+                                        <br>
+    
+                                    </tr>
+                                    
+                                    
+                                
+                                {% endfor %}
+                        </div>
+    
+                        <div class="md-form mb-5">
+    
+                            {{form2.attendees.label()}}
+                            {{form2.attendees(class="form-control validate")}}
+    
+                        </div>
+                        <div class="md-form mb-5">
+    
+                            {{form2.submit2(class="btn btn-primary")}}
+    
+                        </div>
+                    </form>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/Workshop Modal-->
+
+    <!-- Project Request Modal-->
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="preq">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Project Request</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <form method="post">
+                        {{form1.hidden_tag()}}
+                        <div class="md-form mb-5">
+    
+                            {{form1.name.label()}}
+                            {{form1.name(class="form-control validate")}}
+                        </div>
+                        <div class="md-form mb-5">
+    
+                            {{form1.mobile.label()}}
+                            {{form1.mobile(class="form-control validate")}}
+                        </div>
+                        <div class="md-form mb-5">
+    
+                            {{form1.email.label()}}
+                            {{form1.email(class="form-control validate")}}
+                        </div>    
+                        <div class="md-form mb-5">
+    
+                            {{form1.title.label()}}
+                            {{form1.title(class="form-control validate")}}
+    
+                        </div>
+                        <div class="md-form mb-5">
+    
+                            {{form1.description.label()}}
+                            {{form1.description(class="form-control validate")}}
+    
+                        </div>
+                        <div class="md-form mb-5">
+                            {{form1.submit1(class="btn btn-primary")}}
+    
+                        </div>
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+
+    <!--/Modal-->
+
+    <br>
+    <br>
+    <br>
+
+
+    <div class="container" style="border-bottom: 5px white solid ; width: 90%;">
+        <h1 class="text-center" id="title_about" style="color: white;" ><strong><b>Our Team</b></strong></h1></div>
+    <br>
+    <br>
+     <!-- Card -->
+     <!-- <div class="card" style="width: 95%; ">
+        <div class="view-overlay">
+
+            
+            <div class="card-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h3 class="card-title" align="left"><b>Captain</b></h3>
+                            <p align="left" style="color: white;">
+                                Harsh Sankar Naicker
+                            </p>
+
+                        </div>
+                        <div class="col-lg-6">
+                            
+                            <img src="../static/harsh_naicker.jpeg" height="90%" width="90%">
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div> -->
+
+    </div>
+    <!-- Card -->
+    <div class="container text-center">
+        <div class="row mb-3 mt-4 " >
+            <div class="col-md-3 ">
+                <!-- Card -->
+                <div class="card text-center">
+                    <!-- <div class="container"> -->
+
+                    <!-- Card image -->
+                    <img class="card-img-top" src="https://i.ibb.co/m5m2Kv5/harsh-naicker.jpg"
+                        alt="Card image cap" height="280px;">
+
+                    <!-- Card content -->
+                    <div class="card-body">
+                        
+
+                        <!-- Title -->
+                        <h3 class="card-title" style="text-align: center;"><strong>Captain</strong></h3><br>
+                        <h5 style="text-align: center;">Harsh Sankar Naicker</h5>
+                            <p>
+                                Avionics
+                            </p>
+                            <p>harshunaicker@gmail.com</p>
+                            <p><a href="https://www.linkedin.com/in/harsh-sankar-naicker-57502517b" target="_blank" class="li-ic mr-3 class="fa fa-twitter"" role="button"><i
+                                            class="fab fa-lg fa-linkedin-in"></i></a></p>
+                                        
+                            <!-- Text -->
+                        
+
+                    <!-- </div> -->
+                    </div>
+
+                </div>
+                <!-- Card -->
+            </div>
+            <div class="col-md-3">
+                <!-- Card -->
+                <div class="card text-center">
+
+                    <!-- Card image -->
+                    <img class="card-img-top" src="https://i.ibb.co/hgSvc5N/bulandkumar2.jpg"
+                        alt="Card image cap" height="280px;">
+
+                    <!-- Card content -->
+                    <div class="card-body">
+
+                        <!-- Title -->
+                        <h3 class="card-title" style="text-align: center;"><strong>Vice Captain</strong></h3><br>
+                        <h5 style="text-align: center;">Buland Kumar Pradhan</h5>
+                            <p>
+                                Aerodynamics
+                            </p>
+                            <p>bpbuland@gmail.com</p>
+                            <p><a href="https://www.linkedin.com/in/buland-pradhan-50376137" target="_blank" class="li-ic mr-3"
+                                role="button"><i class="fab fa-lg fa-linkedin-in"></i></a></p>
+                            <!-- Text -->
+
+
+
+
+                    </div>
+
+                </div>
+                <!-- Card -->
+            </div>
+
+       
+            <div class="col-md-3">
+                   <!-- Card -->
+                   <div class="card text-center">
+
+                    <!-- Card image -->
+                    <img class="card-img-top" src="https://i.ibb.co/2nYSBp0/akshara-pramod.jpg"  height="280px;"
+                        alt="Card image cap">
+
+                    <!-- Card content -->
+                    <div class="card-body">
+
+                        <!-- Title -->
+                        <h3 class="card-title" style="text-align: center;"><strong>Manager</strong></h3><br>
+                        <h5 style="text-align: center;">Akshara Pramod</h5>
+                            <p>
+                                Management
+                            </p>
+                            <p>akshararuhi@gmail.com</p>
+                            <p><a href="https://www.linkedin.com/in/akshara-pramod" target="_blank" class="li-ic mr-3"
+                                role="button"><i class="fab fa-lg fa-linkedin-in"></i></a></p>
+                                
+                            <!-- Text -->
+
+                    </div>
+
+                </div>
+                <!-- Card -->
+               
+            </div>
+            <div class="col-md-3">
+                <!-- Card -->
+                <div class="card text-center">
+
+                    <!-- Card image -->
+                    <img class="card-img-top" src="https://i.ibb.co/Wp3hywf/aniket-oswal2.jpg"
+                        alt="Card image cap" height="280px;">
+
+                    <!-- Card content -->
+                    <div class="card-body">
+
+                        <!-- Title -->
+                        <h3 class="card-title" style="text-align: center;"><strong>Aerodynamics Head</strong></h3><br>
+                        <h5 style="text-align: center;">Aniket Oswal</h5>
+                            <p>
+                                Aerodynamics
+                            </p>
+                            <p>aniketoswalao22@gmail.com</p>
+                            <p><a href="https://www.linkedin.com/in/aniket-oswal-792872179" target="_blank" class="li-ic mr-3" role="button"><i
+                                            class="fab fa-lg fa-linkedin-in"></i></a></p>
+                            <!-- Text -->
+
+                    </div>
+
+                </div>
+                <!-- Card -->
+            </div>
+        </div>
+        <div class="row mb-3 mt-4 ">
+            <div class="col-md-3">
+             
+                 <!-- Card -->
+                 <div class="card text-center">
+
+                    <!-- Card image -->
+                    <img class="card-img-top" src="https://i.ibb.co/VHggvHd/yash-srivastava2.jpg"
+                        alt="Card image cap" height="280px;">
+
+                    <!-- Card content -->
+                    <div class="card-body">
+
+                        <!-- Title -->
+                        <h3 class="card-title" style="text-align: center;"><strong>Avionics Head</strong></h3><br>
+                        <h5 style="text-align: center;">Yash Srivastava</h5>
+                            <p>
+                                Avionics
+                            </p>
+                            <p>srivastavayash14@yahoo.in</p>
+                            <p><a href="https://www.linkedin.com/in/yash-srivastava-605966199" target="_blank" class="li-ic mr-3"
+                                role="button"><i class="fab fa-lg fa-linkedin-in"></i></a></p>
+                            <!-- Text -->
+
+                    </div>
+
+                </div>
+                <!-- Card -->
+            </div>
+
+
+
+       
+        
+            <div class="col-md-3">
+                <!-- Card -->
+                <div class="card text-center">
+
+                    <!-- Card image -->
+                    <img class="card-img-top" src="https://i.ibb.co/ypc1hVs/akshay2.jpg" height="280px;"
+                        alt="Card image cap">
+
+                    <!-- Card content -->
+                    <div class="card-body">
+
+                        <!-- Title -->
+                        <h3 class="card-title" style="text-align: center;"><strong>Inventory Head</strong></h3><br>
+                        <h5 style="text-align: center;">Akshay Suncktankar</h5>
+                            <p>
+                                Aerodynamics
+                            </p>
+                            <p>akku.goa@hotmail.com</p>
+                            <p><a href="https://www.linkedin.com/in/akshay-sunctankar-823254181" target="_blank" class="li-ic mr-3"
+                                role="button"><i class="fab fa-lg fa-linkedin-in"></i></a></p>
+                            <!-- Text -->
+
+                    </div>
+
+                </div>
+                <!-- Card -->
+            </div>
+            <div class="col-md-3">
+                <!-- Card -->
+                <div class="card text-center">
+
+                    <!-- Card image -->
+                    <img class="card-img-top" src="https://i.ibb.co/w735hmd/nikita-rath2.jpg"
+                        alt="Card image cap" height="280px;">
+
+                    <!-- Card content -->
+                    <div class="card-body">
+
+                        <!-- Title -->
+                        <h3 class="card-title" style="text-align: center;"><strong>Club President</strong></h3><br>
+                        <h5 style="text-align: center;">Nikita Rath</h5>
+                            <p>
+                                Avionics
+                            </p>
+                            <p>nikitarath01@gmail.com</p>
+                            <p><a href="https://www.linkedin.com/in/nikita-rath/" target="_blank" class="li-ic mr-3" role="button"><i
+                                            class="fab fa-lg fa-linkedin-in"></i></a></p>
+                            <!-- Text -->
+
+                    </div>
+
+                </div>
+                <!-- Card -->
+            </div>
+            <div class="col-md-3">
+                <!-- Card -->
+                <div class="card text-center">
+
+                    <!-- Card image -->
+                    <img class="card-img-top" src="https://i.ibb.co/jb6yf38/deepesh2.jpg" height="280px;"
+                        alt="Card image cap">
+
+                    <!-- Card content -->
+                    <div class="card-body">
+
+                        <!-- Title -->
+                        <h3 class="card-title" style="text-align: center;"><strong>Club Vice President</strong></h3><br>
+                        <h5 style="text-align: center;">Deepesh Bhalodia</h5>
+                            <p>
+                                Aerodynamics
+                            </p>
+                            <p>deepeshbhalodia@gmail.com</p>
+                            <p><a href="https://www.linkedin.com/in/deepesh-bhalodia-296771170/" target="_blank" class="li-ic mr-3"
+                                role="button"><i class="fab fa-lg fa-linkedin-in"></i></a></p>
+                            <!-- Text -->
+
+                    </div>
+
+                </div>
+                <!-- Card -->
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    </div>
+    
+    <center>
+
+
+    <div class="accordion" id="accordionExample">
+
+
+        <h5 class="mb-0">
+            <button class="btn btn-link w-50" type="button" data-toggle="collapse" data-target="#collapseOne"
+                aria-expanded="false" aria-controls="collapseOne" style="border: 1px solid white;">
+                <b>Batch Of 2023</b>
+            </button>
+        </h5>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <table style="color: white; font-size: 20px;">
+                <th><div class="container " style="border-bottom: 5px white solid ; width: 90%;">
+                    <h1 class="text-center" id="title_department" style="color: white;" ><strong><b>Avionics Department</b></strong></h1>
+                </div><br></th>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Vidit Naik&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/vidit-naik-9b5bb81a2"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                       Meghna Manoj Nair&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/meghna-manoj-nair-60987b192/"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Gaurav PV&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/gaurav-pampana-7317481b3"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                       Susruta Das&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/susruta-das-13b92018b"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                       Sathvika Vaddiparthi&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/sathvika-vaddiparthi-8133561a6"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                      Sumit Golui&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/mwlite/in/sumit-kumar-golui-249b881b4"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                     Kailash Natrajan&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/kailash-natarajan-4775b21b2/"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                
+                <tr>
+                    <td style="font-size: 20px;">
+                        Badrish Vasu&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/badrish-vasu-4891021b5"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Simrat Singh&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/simrat-singh-35978018b"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                
+                <th><div class="container " style="border-bottom: 5px white solid ; width: 90%;">
+                    <h1 class="text-center" id="title_department" style="color: white;" ><strong><b>Aerodynamics Department</b></strong></h1>
+                </div><br></th>
+
+                <!-- Aerodynamics Team -->
+                <tr>
+                    <td style="font-size: 20px;">
+                        Amal Manoj&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/amal-manoj-877680193"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Sidhant Jaiswal&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/sidhant-jaiswal-2379ba121"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Ayan Kumar&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/ayan-kumar-962183191"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Div Nayan Singh&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/div-nayan-singh-2754b41b6"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Vikrant Thoidingjam&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/vikrant-thoidingjam-10102001"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                <br>
+
+                <!-- Management Team -->
+                <th><div class="container " style="border-bottom: 5px white solid ; width: 90%;">
+                    <h1 class="text-center" id="title_department" style="color: white;" ><strong><b>Management Department</b></strong></h1>
+                </div><br></th>
+                
+                <tr>
+                    <td style="font-size: 20px;">
+                        Ashwin Santosh&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/ashwin-santosh-a85b99162"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Saumya Bhardwaj&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/saumyabhardwaj17"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Manoghn Kandiraju&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/manoghn-kandiraju-a49abb19b"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Vegu Himasurya Teja&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/teja-vegu-7611451b5"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Reet Singh&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/reet-singh-8a48291b2"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Nipjyoti Goswami&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/nipjyoti-goswami-0952b1200"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+
+                </tr>
+                
+            </table>
+            
+
+            
+            
+        </div>
+        
+        <h5 class="mb-0">
+            <button class="btn btn-link collapsed w-50" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo" style="border: 1px solid white;">
+                <b>Batch of 2022</b>
+            </button>
+        </h5>
+        
+    
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <table style="color: white;font-size: 20px;">
+                <th><div class="container " style="border-bottom: 5px white solid ; width: 90%;">
+                    <h1 class="text-center" id="title_department" style="color: white;" ><strong><b>Avionics Department</b></strong></h1>
+                </div><br></th>
+                
+                <tr>
+                    <td style="font-size: 20px;">
+                        Harsh Sankar Naicker&nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/harsh-sankar-naicker-57502517b"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+        
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Yash Srivastava &nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button"  target="_blank"href="https://www.linkedin.com/in/yash-srivastava-605966199"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+        
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                       Nikita Rath &nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/nikita-rath/"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+        
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                      Vishal Turaga &nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/vishalturaga/"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+        
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                     JS Abhishek &nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/jsabhishek    "><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+        
+                </tr>
+                <th><div class="container " style="border-bottom: 5px white solid ; width: 90%;">
+                    <h1 class="text-center" id="title_department" style="color: white;" ><strong><b>Aerodynamics Department</b></strong></h1>
+                </div><br></th>
+        
+                <tr>
+                    <td style="font-size: 20px;">
+                      Aniket Oswal &nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" href=""><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+        
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                      Buland Kumar Pradhan &nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/buland-pradhan-50376137"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+        
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                      V. Kishore Annanth &nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href=""><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+        
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                     Deepesh Bhalodia &nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href=""><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+        
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Dattaraj Alias Akshay Mahesh Suncktankar &nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/akshay-sunctankar-823254181"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+        
+                </tr>
+                <th><div class="container " style="border-bottom: 5px white solid ; width: 90%;">
+                    <h1 class="text-center" id="title_department" style="color: white;" ><strong><b>Management Department</b></strong></h1>
+                </div><br></th>
+                
+                
+                <tr>
+                    <td style="font-size: 20px;">
+                       Akshara Pramod &nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/akshara-pramod"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+        
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                       Vedanta Trivedi &nbsp;&nbsp;
+                    </td>
+                    <td><a class="li-ic mr-3" role="button" target="_blank" href="https://www.linkedin.com/in/vedanta-trivedi-954a51169"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td>
+        
+                </tr>
+    
+            </table>
+            
+    
+        </div>
+        <h5 class="mb-0">
+            <button class="btn btn-link collapsed w-50" type="button" data-toggle="collapse" data-target="#collapseThree"
+                aria-expanded="false" aria-controls="collapseThree" style="border: 1px solid white;">
+                <b>Batch of 2021</b>
+            </button>
+        </h5>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <table style="color: white;font-size: 20px;">
+                <th><div class="container " style="border-bottom: 5px white solid ; width: 90%;">
+                    <h1 class="text-center" id="title_department" style="color: white;" ><strong><b>Avionics Department</b></strong></h1>
+                </div><br></th>
+                
+                <tr>
+                    <td style="font-size: 20px;">
+                       Ruju Alurkar&nbsp;&nbsp;
+                    </td>
+                    <!-- <td><a class="li-ic mr-3" role="button" href="https://www.linkedin.com/in/harsh-sankar-naicker-57502517b"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td> -->
+        
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Rutuja Bhagat &nbsp;&nbsp;
+                    </td>
+                    <!-- <td><a class="li-ic mr-3" role="button" href="https://www.linkedin.com/in/yash-srivastava-605966199"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td> -->
+        
+                </tr>
+
+                <th><div class="container " style="border-bottom: 5px white solid ; width: 90%;">
+                    <h1 class="text-center" id="title_department" style="color: white;" ><strong><b>Aerodynamics Department</b></strong></h1>
+                </div><br></th>
+        
+                <tr>
+                    <td style="font-size: 20px;">
+                        Aaradhya Bansal &nbsp;&nbsp;
+                    </td>
+                    <!-- <td><a class="li-ic mr-3" role="button" href=""><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td> -->
+        
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Akshay Jayasoorya &nbsp;&nbsp;
+                    </td>
+                    <!-- <td><a class="li-ic mr-3" role="button" href="https://www.linkedin.com/in/buland-pradhan-50376137"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td> -->
+        
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Shubham Singh&nbsp;&nbsp;
+                    </td>
+                    <!-- <td><a class="li-ic mr-3" role="button" href=""><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td> -->
+        
+                </tr>
+                
+                
+                <th><div class="container " style="border-bottom: 5px white solid ; width: 90%;">
+                    <h1 class="text-center" id="title_department" style="color: white;" ><strong><b>Management Department</b></strong></h1>
+                </div><br></th>
+                
+                
+                <tr>
+                    <td style="font-size: 20px;">
+                       Rutuja Bhagat &nbsp;&nbsp;
+                    </td>
+                    <!-- <td><a class="li-ic mr-3" role="button" href="https://www.linkedin.com/in/akshara-pramod"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td> -->
+        
+                </tr>
+                
+    
+            </table>
+            
+    
+        </div>
+
+        <!-- Collapse 4 -->
+        <h5 class="mb-0">
+            <button class="btn btn-link collapsed w-50" type="button" data-toggle="collapse" data-target="#collapseFour"
+                aria-expanded="false" aria-controls="collapseFour" style="border: 1px solid white;">
+                <b>Batch of 2020</b>
+            </button>
+        </h5>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <table style="color: white;font-size: 20px;">
+                <th><div class="container " style="border-bottom: 5px white solid ; width: 90%;">
+                    <h1 class="text-center" id="title_department" style="color: white;" ><strong><b>Avionics Department</b></strong></h1>
+                </div><br></th>
+                
+                <tr>
+                    <td style="font-size: 20px;">
+                       Yash Verma&nbsp;&nbsp;
+                    </td>
+                    <!-- <td><a class="li-ic mr-3" role="button" href="https://www.linkedin.com/in/harsh-sankar-naicker-57502517b"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td> -->
+        
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Akshay Gupta&nbsp;&nbsp;
+                    </td>
+                    <!-- <td><a class="li-ic mr-3" role="button" href="https://www.linkedin.com/in/yash-srivastava-605966199"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td> -->
+        
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Lakshmipriya Anil&nbsp;&nbsp;
+                    </td>
+                    <!-- <td><a class="li-ic mr-3" role="button" href="https://www.linkedin.com/in/yash-srivastava-605966199"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td> -->
+        
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Saurabh Vaishkiyar&nbsp;&nbsp;
+                    </td>
+                    <!-- <td><a class="li-ic mr-3" role="button" href="https://www.linkedin.com/in/yash-srivastava-605966199"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td> -->
+        
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Aditya Gupta&nbsp;&nbsp;
+                    </td>
+                    <!-- <td><a class="li-ic mr-3" role="button" href="https://www.linkedin.com/in/yash-srivastava-605966199"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td> -->
+        
+                </tr>
+
+                <th><div class="container " style="border-bottom: 5px white solid ; width: 90%;">
+                    <h1 class="text-center" id="title_department" style="color: white;" ><strong><b>Aerodynamics Department</b></strong></h1>
+                </div><br></th>
+        
+                <tr>
+                    <td style="font-size: 20px;">
+                        Sumanth Samsani&nbsp;&nbsp;
+                    </td>
+                    <!-- <td><a class="li-ic mr-3" role="button" href=""><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td> -->
+        
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Poonam Kolape&nbsp;&nbsp;
+                    </td>
+                    <!-- <td><a class="li-ic mr-3" role="button" href="https://www.linkedin.com/in/buland-pradhan-50376137"><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td> -->
+        
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Arvind N &nbsp;&nbsp;
+                    </td>
+                    <!-- <td><a class="li-ic mr-3" role="button" href=""><i
+                        class="fab fa-lg fa-linkedin-in"></i></a></td> -->
+        
+                </tr>
+                
+            </table>
+            
+    
+        </div>
+        <h5 class="mb-0">
+            <button class="btn btn-link collapsed w-50" type="button" data-toggle="collapse" data-target="#collapseFive"
+                aria-expanded="false" aria-controls="collapseThree" style="border: 1px solid white;">
+                <b>Batch of 2019</b>
+            </button>
+        </h5>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <table style="color: white;font-size: 20px;">
+                <th><div class="container " style="border-bottom: 5px white solid ; width: 90%;">
+                    <h1 class="text-center" id="title_department" style="color: white;" ><strong><b>Avionics Department</b></strong></h1>
+                </div><br></th>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Ankur Pandey &nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Rudra Sarangi &nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Harshitha Patur &nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Aditya Harikumar &nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Vaisakh Rajendran &nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Sakshi Singh &nbsp;&nbsp;
+                    </td>
+                </tr>
+               
+                
+                 <!---->
+                <th><div class="container " style="border-bottom: 5px white solid ; width: 90%;">
+                    <h1 class="text-center" id="title_department" style="color: white;" ><strong><b>Aerodynamics Department</b></strong></h1>
+                </div><br></th>
+                 <tr>
+                    <td style="font-size: 20px;">
+                        Nishant Kulkarni &nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Pranav Admuthe &nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Syed Samer Akhtar &nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Abhishek Velpuru &nbsp;&nbsp;
+                    </td>
+                </tr>
+                <th><div class="container " style="border-bottom: 5px white solid ; width: 90%;">
+                    <h1 class="text-center" id="title_department" style="color: white;" ><strong><b>Management Department</b></strong></h1>
+                </div><br></th>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Rahul Agarwal &nbsp;&nbsp;
+                    </td>
+                </tr>
+                
+    
+            
+            </table>
+           
+            
+    
+        </div>
+
+
+
+
+
+        <h5 class="mb-0">
+            <button class="btn btn-link collapsed w-50" type="button" data-toggle="collapse" data-target="#collapseSix"
+                aria-expanded="false" aria-controls="collapseThree" style="border: 1px solid white;">
+                <b>Batch of 2018</b>
+            </button>
+        </h5>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <table style="color: white;font-size: 20px;">
+                <th><div class="container " style="border-bottom: 5px white solid ; width: 90%;">
+                    <h1 class="text-center" id="title_department" style="color: white;" ><strong><b>Avionics Department</b></strong></h1>
+                </div><br></th>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Vineet Paulson &nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Devanshu Saxena &nbsp;&nbsp;
+                    </td>
+                </tr>
+                <th><div class="container " style="border-bottom: 5px white solid ; width: 90%;">
+                    <h1 class="text-center" id="title_department" style="color: white;" ><strong><b>Aerodynamics Department</b></strong></h1>
+                </div><br></th>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Santhosh Krishna M &nbsp;&nbsp;
+                    </td>
+                </tr>
+                <th><div class="container " style="border-bottom: 5px white solid ; width: 90%;">
+                    <h1 class="text-center" id="title_department" style="color: white;" ><strong><b>Management Department</b></strong></h1>
+                </div><br></th>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Shiny Leo&nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Pranesh S&nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 20px;">
+                        Robin S&nbsp;&nbsp;
+                    </td>
+                </tr>
+                
+    
+              
+              
+    
+                
+            </table>
+           
+    
+        </div>
+
+
+
+
+    </div>
+   
+
+    
+    
+    
+       
+        
+        
+
+    
+    
+    
+    
+    </center>
+
+
+
+    <br><br><br>
+    </div>
+
+     <!-- Footer -->
+    <footer class="page-footer font-small black
+    pt-4" style="background-color: #050505;">
+
+        <!-- Footer Text -->
+        <div class="container-fluid text-center text-md-left">
+
+
+            <div class="row" style="font-size: 120%;">
+                <div class="col-sm-4">
+                    <h2><strong>Contact Us</strong></h2><br><br>
+                    <p><i class="fas fa-map-marker-alt fa-2x"></i>&nbsp;&nbsp;&nbsp;
+                        VIT University Chennai Campus,<br> Kelambakkam - Vandalur Rd,<br> Chennai, Tamil Nadu 600127
+                    </p>
+                    <p><a href="tel:+91 98929 02383"><i class="fas fa-phone"></i>&nbsp;&nbsp;&nbsp;+91 98929 02383
+                    </p>
+                    <p><a href="mailto:teamaviatorsinternational@gmail.com"><i
+                                class="fas fa-envelope"></i>&nbsp;&nbsp;&nbsp;teamaviatorsinternational@gmail.com</a>
+                    </p> 
+                    <p>
+                        <a href="preq" data-toggle="modal" data-target="#contact"><i class="fas fa-question"></i>&nbsp;&nbsp;&nbsp;Have any further doubts?</a>
+                    </p>
+
+
+
+                </div>
+                <div class="col-sm-4">
+                    <h2><strong>
+                            Find Us
+                        </strong></h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124483.40068401828!2d80.08535047620059!3d12.836408826600854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5259ba8cceb509%3A0xbe3fbbd2b29ff1ee!2sAVIATORS%20INTERNATIONAL!5e0!3m2!1sen!2sin!4v1598857036194!5m2!1sen!2sin"
+                        width="100%" height="250px;" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div class="col-sm-4">
+                    <ul>Developed by:
+                        <li>Vidit Naik</li>
+                        <li>Meghna Manoj Nair</li>
+                        <li>Nikita Rath</li>
+                        <li>Harsh Sankar Naicker</li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row ">
+                <div class="col-sm-12 text-center">
+                    <a class="ins-ic mr-3" role="button" target="_blank"
+                        href="https://www.instagram.com/teamaviatorsinternational/?hl=en"><i
+                            class="fab fa-2x ml-5 mr-5 fa-instagram"></i></a>
+                    <a class="fb-ic mr-3" target="_blank" role="button"
+                        href="https://www.facebook.com/AviatorsInternational"><i
+                            class="fab fa-2x ml-5 mr-5 fa-facebook-f"></i></a>
+                    <a class="li-ic mr-3" target="_blank" role="button"
+                        href="https://www.linkedin.com/company/team-aviators-international"><i
+                            class="fab fa-2x ml-5 mr-5 fa-linkedin-in"></i></a>
+                    <a class="yt-ic mr-3" role="button" target="_blank"
+                        href="https://www.youtube.com/channel/UCevoVmjAEpPY4JLs3Pvxz2A"><i
+                            class="fab fa-2x ml-5 mr-5 fa-youtube"></i></a>
+                </div>
+
+
+            </div>
+
+        </div>
+        <!-- Footer Text -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href=""> Team Aviators International</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+
+    <!-- Footer -->
+
+
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+</body>
+
+</html>
